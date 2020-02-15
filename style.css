@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(135deg, rgba(163,44,223,1), rgba(106,139,219,1), rgba(16,106,210,1));
+}
+
+.area {
+    float: left;
+    width: 100%;
+    height: 100%;
+    }
+li {
+    list-style-type: none;
+}
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+.sidebar-menu {
+    background:#e5e5e5;
+    position:absolute;
+    top:0;
+    bottom:0;
+    height:100%;
+    left:0;
+    width:30px;
+    overflow:hidden;
+    -webkit-transition:width .5s ease-in-out;
+    transition:width .5s ease-in-out;
+    -webkit-transform:translateZ(0) scale(1,1); 
+}
+
+
+.sidebar-menu li {
+    position:relative;
+    width:140px;
+    }
+.sidebar-menu .semester {
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+.sidebar-menu li>a {
+    position:relative;
+    display:flex;
+    align-items: center;
+    color:black;
+    font-family: arial;
+    font-size: 60%;
+    padding: .4rem 0;
+    text-decoration:none;
+    -webkit-transform:translateZ(0) scale(1,1);
+    -webkit-transition:all .1s linear;
+    transition:all .1s linear;
+    z-index: 1000;     
+}
+
+.sidebar-menu .icon {
+    position: relative;
+    width: 14%;
+    height: 14%;
+    margin-left: 5px;
+}
+ .sidebar-menu .nav-text {
+        position:relative;
+        font-family: 'Titillium Web', sans-serif;
+        top: 0.100rem;
+        }
+
+.sidebar-menu .align {
+    justify-content: center;
+    padding: .6rem;
+    
+}
+.sidebar-menu .even {
+    align-items: center;
+    background: white;
+  
+ 
+}
+
+.sidebar-menu:hover {
+    width:140px;
+    overflow:visible;
+}
+.sidebar-menu:hover .semester {
+    opacity: 1;
+    
+}
+
+.sidebar-menu:hover .even {
+    color: white;
+    background: linear-gradient(135deg, rgba(163,44,223,1), rgba(106,139,219,1), rgba(16,106,210,1));
+}
+
+.align:hover {
+    font-size: 90%;
+}
+
+
+@media (min-width: 1024px) {
+    .sidebar-menu {
+        width: 50px;
+    }
+    .sidebar-menu:hover {
+        width: 270px;
+    }
+    .sidebar-menu li {
+        width: 270px;
+    }
+
+    .sidebar-menu li>a {
+        font-size: 120%;
+    }
+    .align:hover {
+        font-size: 150%;
+    }
+}
